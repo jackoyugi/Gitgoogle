@@ -11,12 +11,18 @@ import { from } from 'rxjs';
 import { PipesComponent } from './pipes/pipes.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { NavbarComponent } from './navbar/navbar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     PipesComponent,
+    RepositoriesComponent,
+    ProfileComponent,
+    NavbarComponent,
     
     
   ],
@@ -26,7 +32,8 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
     HttpClientModule,
     FormsModule,
     NgProgressModule.forRoot(),
-    NgProgressHttpClientModule 
+    NgProgressHttpClientModule,
+   // ProfileComponent,
   
   ],
   providers: [ProfileService],

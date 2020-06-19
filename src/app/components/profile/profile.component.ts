@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfileService} from '../../services/profile.service'
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+// import { ProfileComponent } from './components/profile/profile.component';
 
 
 @Component({

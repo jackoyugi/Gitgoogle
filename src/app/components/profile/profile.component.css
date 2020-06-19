@@ -1,1 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.css"
+/* @import "~bootstrap/dist/css/bootstrap.css" */
+.search-form {
+    padding-top: 50px;
+}

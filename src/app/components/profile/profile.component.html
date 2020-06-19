@@ -1,3 +1,8 @@
+<form action="" class="search-form">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Git google username" [(ngModel)]="username" name="username" required>
+    </div>
+</form>
 <div *ngIf="profile">
     <div class="panel panel-default">
         <div class="card-heading">
@@ -38,7 +43,10 @@
                             </div>
                             <div class="panel-body" *ngFor="let repo of repos">
                                 <p>
-                                    
+                                    {{repo.name}}   <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-success btn-sm float-right">View this Project in Github</a>
+                                </p>
+                                <p>
+                                    {{repo.description}}
                                 </p>
 
                             </div>

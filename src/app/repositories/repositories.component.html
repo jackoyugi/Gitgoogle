@@ -2,4 +2,18 @@
     <h1 class="display-4 text-center">Repositories</h1>
     <hr class="my-4">
     <p class="lead text-center">View this these amazing projects in the Repositories!</p>
+    <div class="panel panel-default">
+        <div class="jumbotron" id="panel">
+            <h1 class="label label-warning">Repos</h1>
+        </div>
+        <div class="jumbotron" *ngFor="let repo of repos">
+            <p><strong>
+                {{repo.name}}   <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-success btn-sm float-right">View this Project in Github</a>
+            </strong></p>
+            <p>
+                {{repo.description}}
+            </p>
+
+        </div>
+    </div>
   </div>

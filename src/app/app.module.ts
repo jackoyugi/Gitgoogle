@@ -13,6 +13,7 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { NavbarComponent } from './navbar/navbar.component';
+// import {RespositoriesService} from './services/repositories.service';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     RepositoriesComponent,
     ProfileComponent,
     NavbarComponent,
+   
     
     
   ],
@@ -34,6 +36,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     NgProgressModule.forRoot(),
     NgProgressHttpClientModule,
    // ProfileComponent,
+  //  RespositoriesService,
   
   ],
   providers: [ProfileService],

@@ -1,6 +1,11 @@
-<form action="" class="search-form">
+<div class="container">
+<ng-progress></ng-progress>
+<form  #searchForm='ngForm' action="" class="search-form">
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Git google username" [(ngModel)]="username" name="username" (keyup)="findProfile()" required>
+        <input type="text" class="form-control" placeholder="Git google username" [(ngModel)]="username" name="username" (keyup)="findProfile()" #name='ngModel' required>
+        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <p>Username required</p>
+        </div>
     </div>
     <button type="submit" class="btn btn-outline-primary btn-md" id="search">Search</button>
 </form>
@@ -64,4 +69,5 @@
 
         </div>
     </div>
+</div>
 </div>

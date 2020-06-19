@@ -9,6 +9,8 @@ import { ProfileService } from './services/profile.service';
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
 import { PipesComponent } from './pipes/pipes.component';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { PipesComponent } from './pipes/pipes.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgProgressModule.forRoot(),
+    NgProgressHttpClientModule 
   
   ],
   providers: [ProfileService],

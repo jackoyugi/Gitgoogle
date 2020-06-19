@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ProfileService} from '../../services/profile.service'
+import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+
 
 @Component({
   selector: 'app-profile',
@@ -7,6 +9,11 @@ import {ProfileService} from '../../services/profile.service'
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+
+  //this.http.get<ApiResponse>("https://jackoyugi.github.io/Gitgoole/").subscribe(data =>{
+    //Sucessful API request
+    
+  //})
 
   profile:any = [];
   repos:any = [];

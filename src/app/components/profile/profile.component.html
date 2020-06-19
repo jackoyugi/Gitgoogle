@@ -2,19 +2,20 @@
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Git google username" [(ngModel)]="username" name="username" (keyup)="findProfile()" required>
     </div>
+    <button type="submit" class="btn btn-primary btn-md" id="search">Search</button>
 </form>
 <div *ngIf="profile">
     <div class="panel panel-default">
-        <div class="card-heading">
-            {{profile.name}} <small>({{profile.login}})</small>
-            , works at {{profile.company}}
-            , and comes from {{profile.location}}
-        </div>
+        <h3 class="card-heading">
+            {{profile.name}}<small *ngIf="profile.login">({{profile.login}})</small>
+            <span *ngIf="profile.company">, works at {{profile.company}}</span>
+            <span *ngIf="profile.location">, and comes from {{profile.location}}</span>
+        </h3>
         <hr>
         <div class="card-body">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="{{profile.avatar_url}}"class="img-circle img-responsive" alt="Profile Image">
+                    <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
                 </div>
                 <div class="col-sm-5">
                     <ul class="list-group">
@@ -31,20 +32,20 @@
                 <div class="col-sm-4">
                     <div>
                         <p>
-                            <span class="label label-default">{{profile.followers}}Followers</span>
-                            <span class="label label-success"> Following {{profile.following}}</span>
-                            <span class="label label-primary">{{profile.public_gists}}public Gists</span>
-                            <span class="label label-info">{{profile.public_repos}}Public Repos</span>
+                            <span class="badge btn btn-primary">{{profile.followers}}Followers</span>
+                            <span class="badge btn btn-success"> Following {{profile.following}}</span>
+                            <span class="badge btn btn-danger">{{profile.public_gists}}Gists</span>
+                            <span class="badge btn btn-info">{{profile.public_repos}}Repos</span>
                         </p>
-                        <button><a href="{{profile.html_url}}" class="btn btn-sucess btn-sm">View Profile on github</a></button>
+                        <button class="btn btn-success"><a href="{{profile.html_url}}||uppercase">View Profile on github</a></button>
                         <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Repos</h3>
+                            <div class="jumbotron" id="panel">
+                                <h1 class="label label-warning">Repos</h1>
                             </div>
-                            <div class="panel-body" *ngFor="let repo of repos">
-                                <p>
+                            <div class="jumbotron" *ngFor="let repo of repos">
+                                <p><strong>
                                     {{repo.name}}   <a href="{{repo.html_url}}" target="_blank" class="btn btn-outline-success btn-sm float-right">View this Project in Github</a>
-                                </p>
+                                </strong></p>
                                 <p>
                                     {{repo.description}}
                                 </p>

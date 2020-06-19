@@ -2,3 +2,18 @@
 .search-form {
     padding-top: 50px;
 }
+#search {
+    padding-top: 20px;
+    float: right;
+}
+#panel{
+    padding-top: 50 px;
+}
+/* 
+.card-body {
+    background-color: rgb(100, 97, 97);
+} */
+
+/* .card-body{
+    color: chartreuse;
+} */

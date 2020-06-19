@@ -8,11 +8,13 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileService } from './services/profile.service';
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
+    PipesComponent,
     
     
   ],

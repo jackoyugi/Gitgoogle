@@ -2,11 +2,11 @@
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Git google username" [(ngModel)]="username" name="username" (keyup)="findProfile()" required>
     </div>
-    <button type="submit" class="btn btn-primary btn-md" id="search">Search</button>
+    <button type="submit" class="btn btn-outline-primary btn-md" id="search">Search</button>
 </form>
 <div *ngIf="profile">
     <div class="panel panel-default">
-        <h3 class="card-heading">
+        <h3 class="card-header">
             {{profile.name}}<small *ngIf="profile.login">({{profile.login}})</small>
             <span *ngIf="profile.company">, works at {{profile.company}}</span>
             <span *ngIf="profile.location">, and comes from {{profile.location}}</span>
@@ -14,22 +14,25 @@
         <hr>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-3">
+                <div class="col-md-6">
                     <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-                </div>
-                <div class="col-sm-5">
-                    <ul class="list-group">
-                        <li class="list-group-item">{{profile.bio}}</li>
-                        <li class="list-group-item">{{profile.twitter}}</li>
+                    <!-- </div> -->
+                     <!-- <div class="card-body"> -->
+                  <div class="">
+                    <ul class="card">
+                        <li *ngIf="profile.bio" class="list-group-item">{{profile.bio}}</li>
+                        <li *ngIf="profile.twitter" class="list-group-item">{{profile.twitter}}</li>
                             <hr>
-                        <li class="list-group-item">{{profile.company}}</li>
+                        <li *ngIf="profile.company" class="list-group-item">{{profile.company}}</li>
                             <hr>
-                        <li class="list-group-item">{{profile.location}}</li>
+                        <li *ngIf="profile.location" class="list-group-item">{{profile.location}}</li>
                             <hr>
-                        <li class="list-group-item"><a href="{{profile.blo}}" target="_blank">{{profile.blog}}</a></li>
+                        <li *ngIf="profile.blog" class="list-group-item"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
                     </ul>
-                </div>
-                <div class="col-sm-4">
+                    </div>
+                 </div>
+                <!-- </div> -->
+                <div class="col-md-6">
                     <div>
                         <p>
                             <span class="badge btn btn-primary">{{profile.followers}}Followers</span>
@@ -37,7 +40,7 @@
                             <span class="badge btn btn-danger">{{profile.public_gists}}Gists</span>
                             <span class="badge btn btn-info">{{profile.public_repos}}Repos</span>
                         </p>
-                        <button class="btn btn-success"><a href="{{profile.html_url}}||uppercase">View Profile on github</a></button>
+                        <button class="btn btn-outline-success"><a href="{{profile.html_url}}||uppercase">View Profile on github</a></button>
                         <div class="panel panel-default">
                             <div class="jumbotron" id="panel">
                                 <h1 class="label label-warning">Repos</h1>

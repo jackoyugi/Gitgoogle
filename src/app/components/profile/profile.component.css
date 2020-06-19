@@ -9,6 +9,11 @@
 .card{
     padding-top: 50 px;
 }
+.badge{
+    padding-left: 30px;
+    font-size: medium;
+    margin: 10px;
+}
 /* 
 .card-body {
     background-color: rgb(100, 97, 97);

@@ -55,4 +55,4 @@ Run `ng test` to execute the unit tests via [Jack](https://jackoyugi.github.io).
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [IpQuate README](https://github.com/jackoyugi/README.md).
+To get more help on the Angular CLI use `ng help` or go check out the [Gitgoogle README](https://github.com/jackoyugi/README.md).

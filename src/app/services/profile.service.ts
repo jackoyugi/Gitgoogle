@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import { RepositoriesComponent } from '../repositories/repositories.component';
 //import 'rxjs/add/operator/map';
+// import {UserName} from '../username/username.component'
+import { from } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'

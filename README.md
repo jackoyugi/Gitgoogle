@@ -31,7 +31,8 @@ This app enable search for Github profiles and repos, `one types the username on
 </ol>
 
 ## Github deployment link
-https://jackoyugi-github.io/Gitgoogle/
+https://jackoyugi.github.io/Gitgoogle/
+
 
 # Contact 
 For any inquery or input and contributions check out to me
